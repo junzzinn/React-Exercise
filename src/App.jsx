@@ -1,27 +1,17 @@
-import React, { useState } from "react";
 
-function Counter() {
-  const [count, setCount] = useState(0);
+import React from "react";
+import ConditionalRendering from "./ConditionalRendering";
+import DynamicObjects from "./DynamicObjects";
+import Counter from "./Counter";
 
-  // Increase function
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  // Deacrease function
-  const decrement = () => {
-    setCount(count - 1);
-  };
-
+export default function App() {
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Counter: {count}</h1>
-      <button onClick={increment} style={{ marginRight: "10px" }}>
-        Increment
-      </button>
-      <button onClick={decrement}>Decrement</button>
+    <div>
+      <h1>Exercise 1: Counter</h1>
+      <Counter />
+      <h1>Exercise 2: Conditional Rendering & Dynamic Objects</h1>
+      <ConditionalRendering />
+      <DynamicObjects />
     </div>
   );
 }
-
-export default Counter;
